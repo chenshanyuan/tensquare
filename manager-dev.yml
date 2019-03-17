@@ -28,5 +28,10 @@ zuul:
     tensquare-search: /search/**
     tensquare-spit: /spit/**
     tensquare-user: /user/**
-#  add-host-header: true #携带请求本身的头信息
-#  sensitive-headers: #配置禁止使用的头信息
+  add-host-header: true #携带请求本身的头信息
+  sensitive-headers: #配置禁止使用的头信息
+management: #暴露触发消息总线的地址
+  endpoints:
+    web:
+      exposure:
+        include: bus‐refresh
