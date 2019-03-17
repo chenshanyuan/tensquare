@@ -25,3 +25,8 @@ jwt:
   config:
     key: tensquare
     ttl: 3600000
+management: #暴露触发消息总线的地址
+  endpoints:
+    web:
+      exposure:
+        include: bus‐refresh
