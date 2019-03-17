@@ -1,0 +1,27 @@
+server:
+  port: 9010
+spring:
+  application:
+    name: tensquare-friend
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.12.145:3306/tensquare_friend?characterEncoding=utf-8&useSSL=false
+    password: root
+    username: root
+    jpa:
+      database: mysql
+      show-sql: true
+      generate-ddl: true
+  rabbitmq:
+    host: 192.168.12.145
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+jwt:
+  config:
+    key: tensquare
+    ttl: 3600000

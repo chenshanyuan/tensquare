@@ -1,0 +1,26 @@
+server:
+  port: 10011
+spring:
+  application:
+    name: tensquare-web
+  rabbitmq:
+    host: 192.168.12.145
+eureka:
+  client:
+    serviceUrl: #Eureka客户端与Eureka服务端进行交互的地址
+      defaultZone: http://127.0.0.1:10086/eureka
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+zuul:
+  routes:
+    tensquare-base: /base/**
+    tensquare-friend: /friend/**
+    tensquare-article: /article/**
+    tensquare-qa: /qa/**
+    tensquare-recruit: /recruit/**
+    tensquare-search: /search/**
+    tensquare-spit: /spit/**
+    tensquare-user: /user/**
+  add-host-header: true #携带请求本身的头信息
+  sensitive-headers: #配置禁止使用的头信息
