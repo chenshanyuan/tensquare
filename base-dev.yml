@@ -1,5 +1,8 @@
 server:
   port: 9001
+tensquare:
+  ip:
+    bus: 127.0.0.1
 spring:
   application:
     name: tensquare-base
